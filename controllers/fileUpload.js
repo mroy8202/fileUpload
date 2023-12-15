@@ -1,6 +1,7 @@
 const File = require("../models/File");
 
 // localfileupload -> handler function
+// upload file on server
 exports.localFileUpload = async (req, res) => {
     try {
         // fetch file
@@ -26,4 +27,5 @@ exports.localFileUpload = async (req, res) => {
         console.log(error);
         message: "Error in uploading file"
     }
-}
+};
+
