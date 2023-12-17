@@ -11,7 +11,10 @@ const port = process.env.PORT || 3000;
 // middleware
 app.use(express.json());
 // middleware to upload file at server
-app.use(fileupload());
+app.use(fileupload({
+    useTempFiles: true,
+    tempFileDir: '/tmp/'
+}));
 
 // dbconnect
 db.connect();
